@@ -11,6 +11,5 @@ RUN npm run build
 ### nginx static website auto hosts from /usr/share/nginx/html
 
 FROM nginx
-RUN npm install 
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
